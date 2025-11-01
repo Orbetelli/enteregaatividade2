@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projeto CSS3 - Entrega</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">MinhaMarca</a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cards">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Entrega — Projeto CSS3 Responsivo</h1>
+          <p>Exemplo de layout usando CSS Grid e Flexbox com um design system simples, componentes e validação.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#cards">Ver projetos</a>
+            <button class="btn ghost" id="open-modal">Abrir modal</button>
+          </div>
+        </div>
+        <div class="hero-aside">
+          <div class="card highlight">
+            <h3>Card de destaque</h3>
+            <p>Use este card para mostrar informações importantes.</p>
+            <span class="badge">Novo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cards" class="container section cards-section">
+      <h2 class="section-title">Projetos</h2>
+      <div class="cards-grid">
+        <!-- card 1 -->
+        <article class="card">
+          <img src="img/placeholder-1.jpg" alt="Projeto 1 imagem" />
+          <div class="card-body">
+            <h3>Projeto 1</h3>
+            <p>Descrição curta do projeto que explica o objetivo.</p>
+            <div class="card-actions">
+              <a class="btn small" href="#">Ver</a>
+              <button class="btn outline small">Curtir</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- card 2 -->
+        <article class="card">
+          <img src="img/placeholder-2.jpg" alt="Projeto 2 imagem" />
+          <div class="card-body">
+            <h3>Projeto 2</h3>
+            <p>Descrição curta do projeto que explica o objetivo.</p>
+            <div class="card-actions">
+              <a class="btn small" href="#">Ver</a>
+              <button class="btn outline small">Curtir</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- card 3 -->
+        <article class="card">
+          <img src="img/placeholder-3.jpg" alt="Projeto 3 imagem" />
+          <div class="card-body">
+            <h3>Projeto 3</h3>
+            <p>Descrição curta do projeto que explica o objetivo.</p>
+            <div class="card-actions">
+              <a class="btn small" href="#">Ver</a>
+              <button class="btn outline small">Curtir</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre" class="container section">
+      <h2 class="section-title">Sobre</h2>
+      <p>Informações sobre o projeto, o design system e a implementação.</p>
+      <ul class="tags">
+        <li class="tag">Grid</li>
+        <li class="tag">Flexbox</li>
+        <li class="tag">Acessibilidade</li>
+      </ul>
+    </section>
+
+    <section id="contato" class="container section">
+      <h2 class="section-title">Contato</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+          <small class="field-error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <small class="field-error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <small class="field-error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Enviar</button>
+          <button type="reset" class="btn outline">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close" id="close-modal" aria-label="Fechar modal">&times;</button>
+      <h3 id="modal-title">Modal de Exemplo</h3>
+      <p>Este modal demonstra um componente de feedback.</p>
+      <div class="modal-actions">
+        <button class="btn primary" id="modal-ok">OK</button>
+        <button class="btn outline" id="modal-cancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — Projeto CSS3 • <a href="#">Repositório público</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
